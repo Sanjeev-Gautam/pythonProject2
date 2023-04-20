@@ -28,16 +28,17 @@ class LinkedList:
         while curr_node:
             print(curr_node.data)
             curr_node=curr_node.next
+def single():
+  l1 = LinkedList()
+  l1.add(8)
+  l1.add(7)
+  l1.add(3)
+  l1.add(5)
+  l1.add(6)
+  print("Lets print single Linked list")
+  l1.print1()
 
-l1 = LinkedList()
-l1.add(8)
-l1.add(7)
-l1.add(3)
-l1.add(5)
-l1.add(6)
-print("Lets print single Linked list")
-l1.print1()
-
+single()
 
 
 

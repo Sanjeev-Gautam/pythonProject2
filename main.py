@@ -1,3 +1,7 @@
+from Data_Structure.Linked_list import Single_linked_list
+from Data_Structure.Linked_list import CircularLinkedList
+from Data_Structure.Linked_list import DoublyLinkedList
+
 class Node:
     def __init__(self, data):
         self.data = data
@@ -53,3 +57,12 @@ my_list.head = reverse_list(my_list.head)
 # Print the reversed list
 print("Reversed List:")
 my_list.print_list()
+
+def main():
+    single_list = Single_linked_list
+    double_list = DoublyLinkedList
+    circular_list = CircularLinkedList
+
+
+if __name__ == "__main__":
+    main()
