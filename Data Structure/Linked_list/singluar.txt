@@ -1,0 +1,14 @@
+explain this def __init__(self, data=None):
+
+
+__init__ is a special method in Python classes, also known as a constructor.
+ It is automatically called when an object of the class is created,
+ and it is used to initialize the attributes of the class.
+
+In this specific example, __init__ method is defined in the Node class and it takes one argument: data.
+The data parameter is set to None by default, which means that if no data is provided when an object is created,
+it will default to None.
+
+The __init__ method initializes the data attribute of the Node object with the provided data,
+ and the next attribute with None. This method is called when a new object of the Node class is created,
+ and it sets the initial state of the object.
