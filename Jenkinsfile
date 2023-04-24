@@ -13,9 +13,13 @@ pipeline {
             }
         }
 
-        stage('Build') {
+       stage('Build') {
+            environment {
+                PATH = "/usr/local/bin:${env.PATH}"
+            }
             steps {
-                sh 'main.py' // Run tests
+                sh 'pip install -r requirements.txt'
+                sh 'python setup.py install'
             }
         }
     }
