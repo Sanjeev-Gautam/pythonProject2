@@ -15,7 +15,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'python main.py' // Run tests
+                sh 'main.py' // Run tests
             }
         }
     }
