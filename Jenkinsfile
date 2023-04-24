@@ -1,23 +1,23 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Clone repository') {
-            steps {
-                git 'https://github.com/Sanjeev-Gautam/pythonProject2.git'
-            }
+           agent any
+      stage('Checkout') {
+       steps {
+        checkout([
+            $class: 'GitSCM',
+            branches: [[name: '*/main']], // The branch to checkout
+            userRemoteConfigs: [[url: 'https://github.com/Sanjeev-Gautam/pythonProject2.git']], // The GitHub repository URL
+            extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'my_project']] // The directory to checkout to
+        ])
+         }
         }
 
-        stage('Install dependencies') {
-            steps {
-                sh 'pip install -r requirements.txt'
-            }
-        }
+
+
 
         stage('Build') {
             steps {
                 sh 'python main.py'
             }
         }
-    }
+
 }
